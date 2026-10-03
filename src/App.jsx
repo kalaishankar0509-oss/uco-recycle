@@ -1,122 +1,86 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
-
+import "./App.css";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
+    <div>
+      <nav>
+        <h2>UCO Recycle</h2>
+
         <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#how">How It Works</a>
+          <a href="#contact">Contact</a>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      </nav>
 
-      <div className="ticks"></div>
+      <main id="home">
+        <section className="hero">
+          <div>
+            <h1>Turn Used Cooking Oil Into a Better Future</h1>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+            <p>
+              UCO Recycle helps collect used cooking oil and transform it
+              into sustainable, eco-friendly products.
+            </p>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+            <button>Schedule a Collection</button>
+          </div>
+        </section>
+
+        <section id="about">
+          <h2>Why Recycle Used Cooking Oil?</h2>
+
+          <div className="cards">
+            <div className="card">
+              <h3>♻️ Recycle</h3>
+              <p>Give used cooking oil a useful second life.</p>
+            </div>
+
+            <div className="card">
+              <h3>🌱 Eco Friendly</h3>
+              <p>Support cleaner and more sustainable practices.</p>
+            </div>
+
+            <div className="card">
+              <h3>💧 Collect</h3>
+              <p>Make used oil collection simple and convenient.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="how">
+          <h2>How It Works</h2>
+
+          <div className="steps">
+            <div>
+              <strong>01</strong>
+              <p>Collect your used cooking oil.</p>
+            </div>
+
+            <div>
+              <strong>02</strong>
+              <p>Schedule a collection.</p>
+            </div>
+
+            <div>
+              <strong>03</strong>
+              <p>We collect and recycle it.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact">
+          <h2>Start Recycling Today</h2>
+          <p>Small changes can make a big difference.</p>
+          <button>Get Started</button>
+        </section>
+      </main>
+
+      <footer>
+        <p>© 2026 UCO Recycle. All rights reserved.</p>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
